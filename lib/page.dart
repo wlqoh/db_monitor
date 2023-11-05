@@ -14,7 +14,13 @@ class _PageWidgetState extends State<PageWidget> {
         value: "sql_monitor",
         child: Text(
           "sql_monitor",
-          style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),
+          style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),
+        )),
+    DropdownMenuItem(
+        value: "sql_monitor2",
+        child: Text(
+          "sql_monitor2",
+          style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),
         )),
   ];
   List<DropdownMenuItem<String>> users = const [
@@ -22,7 +28,13 @@ class _PageWidgetState extends State<PageWidget> {
         value: "gamidsql",
         child: Text(
           "gamidsql",
-          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+          style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+        )),
+    DropdownMenuItem(
+        value: "gamidsql2",
+        child: Text(
+          "gamidsql2",
+          style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
         )),
   ];
   String selectedDb = 'sql_monitor';
@@ -33,7 +45,7 @@ class _PageWidgetState extends State<PageWidget> {
     DateTime now = DateTime.now();
     String formattedDate = DateFormat('yyyy-MM-dd - kk:mm').format(now);
     return Scaffold(
-      backgroundColor: const Color.fromRGBO(36, 36, 36, 0.5),
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(16.0),
@@ -46,7 +58,7 @@ class _PageWidgetState extends State<PageWidget> {
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 20,
-                      color: Colors.white,
+                      color: Colors.black,
                     ),
                   ),
                   const SizedBox(width: 10),
@@ -55,7 +67,7 @@ class _PageWidgetState extends State<PageWidget> {
                     style: const TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 20,
-                      color: Colors.white,
+                      color: Colors.black,
                     ),
                   ),
                 ],
@@ -68,7 +80,7 @@ class _PageWidgetState extends State<PageWidget> {
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 20,
-                      color: Colors.white,
+                      color: Colors.black,
                     ),
                   ),
                   const SizedBox(width: 10),
@@ -77,7 +89,7 @@ class _PageWidgetState extends State<PageWidget> {
                     style: const TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 15,
-                      color: Colors.white,
+                      color: Colors.black,
                     ),
                   ),
                 ],
@@ -90,7 +102,7 @@ class _PageWidgetState extends State<PageWidget> {
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 20,
-                      color: Colors.white,
+                      color: Colors.black,
                     ),
                   ),
                   const SizedBox(width: 10),
@@ -99,7 +111,7 @@ class _PageWidgetState extends State<PageWidget> {
                     style: const TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 20,
-                      color: Colors.white,
+                      color: Colors.black,
                     ),
                   ),
                 ],
@@ -112,7 +124,7 @@ class _PageWidgetState extends State<PageWidget> {
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 20,
-                      color: Colors.white,
+                      color: Colors.black,
                     ),
                   ),
                   SizedBox(width: 10),
@@ -121,7 +133,7 @@ class _PageWidgetState extends State<PageWidget> {
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 20,
-                      color: Colors.white,
+                      color: Colors.black,
                     ),
                   ),
                 ],
@@ -134,7 +146,7 @@ class _PageWidgetState extends State<PageWidget> {
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 20,
-                      color: Colors.white,
+                      color: Colors.black,
                     ),
                   ),
                   SizedBox(width: 10),
@@ -143,7 +155,7 @@ class _PageWidgetState extends State<PageWidget> {
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 20,
-                      color: Colors.white,
+                      color: Colors.black,
                     ),
                   ),
                 ],
@@ -156,12 +168,12 @@ class _PageWidgetState extends State<PageWidget> {
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 20,
-                      color: Colors.white,
+                      color: Colors.black,
                     ),
                   ),
                   const SizedBox(width: 15),
                   DropdownButton(
-                      dropdownColor: const Color.fromRGBO(36, 36, 36, 0.5),
+                      dropdownColor: Colors.white,
                       value: selectedDb,
                       onChanged: (String? newValue) {
                         setState(() {
@@ -178,12 +190,12 @@ class _PageWidgetState extends State<PageWidget> {
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 20,
-                      color: Colors.white,
+                      color: Colors.black,
                     ),
                   ),
                   const SizedBox(width: 15),
                   DropdownButton(
-                      dropdownColor: const Color.fromRGBO(36, 36, 36, 0.5),
+                      dropdownColor: Colors.white,
                       value: selectedUser,
                       onChanged: (String? newValue) {
                         setState(() {
@@ -201,7 +213,7 @@ class _PageWidgetState extends State<PageWidget> {
                           DateFormat('yyyy-MM-dd - kk:mm').format(now);
                     });
                   },
-                  child: const Text('Обновить данные'))
+                  child: const Text('Обновить данные', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black),))
             ],
           ),
         ),
